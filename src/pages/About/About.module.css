@@ -16,18 +16,12 @@
 }
 
 .avatar {
-  display: grid;
-  width: 100%;
-  aspect-ratio: 1;
-  place-items: center;
-  border: 1px solid rgba(69, 212, 255, 0.32);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(135deg, rgba(69, 212, 255, 0.18), rgba(64, 241, 178, 0.1)),
-    var(--surface);
-  color: var(--text);
-  font-size: clamp(3rem, 10vw, 5rem);
-  font-weight: 950;
+  width: 230px;
+  height: 230px;
+  border-radius: 5%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .profileCard h1 {

@@ -1,15 +1,18 @@
 import { BriefcaseBusiness, GraduationCap, Target, UserRound } from 'lucide-react';
 import { profile, timeline } from '../../data/profile.js';
 import styles from './About.module.css';
+import profileImage from '../../assets/profile.jpg';
 
 export default function About() {
   return (
     <section className="section">
       <div className={`container ${styles.layout}`}>
         <aside className={`${styles.profileCard} reveal`}>
-          <div className={styles.avatar} aria-label="Foto de perfil placeholder">
-            ER
-          </div>
+          <img
+            src={profileImage}
+            alt="Foto de Eliezer Rosario"
+            className={styles.avatar}
+          />
           <h1>{profile.name}</h1>
           <p>{profile.title}</p>
         </aside>
