@@ -127,14 +127,18 @@
   margin-top: 34px;
 }
 
-.placeholder {
-  display: grid;
-  min-height: 260px;
-  align-content: center;
-  border: 1px dashed rgba(69, 212, 255, 0.38);
+.dashboardImage {
+  width: 100%;
+  height: auto;
   border-radius: var(--radius);
-  padding: 24px;
-  background: rgba(69, 212, 255, 0.055);
+  object-fit: contain;
+}
+
+.placeholder {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
 }
 
 .placeholder span {

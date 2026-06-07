@@ -5,6 +5,13 @@ import KpiCard from '../../components/KpiCard/KpiCard.jsx';
 import Button from '../../components/Button/Button.jsx';
 import { projects } from '../../data/projects.js';
 import styles from './ProjectDetail.module.css';
+import dashboardVentas from '../../assets/dashboard-ventas.png';
+import dashboardInventario from '../../assets/inventario-dashboard.png';
+
+const projectImages = {
+  'dashboard-ventas': dashboardVentas,
+  'dashboard-inventario': dashboardInventario
+};
 
 export default function ProjectDetail() {
   const { projectSlug } = useParams();
@@ -64,8 +71,11 @@ export default function ProjectDetail() {
           <div className={styles.dashboardArea}>
             <DashboardMockup type={project.imageType} />
             <div className={styles.placeholder}>
-              <span>Espacio para capturas de Power BI</span>
-              <p>Reemplaza este bloque por imagenes reales del dashboard cuando esten disponibles.</p>
+              <img
+                src={projectImages[project.slug]}
+                alt={`Dashboard ${project.name}`}
+                className={styles.dashboardImage}
+              />
             </div>
           </div>
 

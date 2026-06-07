@@ -6,9 +6,9 @@ export const profile = {
     'Soy estudiante del Instituto Tecnologico de las Americas (ITLA), con formacion en Desarrollo de Software y analisis de datos. Me apasiona transformar datos en informacion util para la toma de decisiones.',
   shortSummary:
     'Transformando datos en decisiones mediante analisis, visualizacion y automatizacion.',
-  email: 'eliezer.rosario@example.com',
-  github: 'https://github.com/',
-  linkedin: 'https://www.linkedin.com/'
+  email: 'eliezer2rosario@gmail.com',
+  github: 'https://github.com/eligamer0',
+  linkedin: 'https://www.linkedin.com/in/eliezer-r/'
 };
 
 export const timeline = [

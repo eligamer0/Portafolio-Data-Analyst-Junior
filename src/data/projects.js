@@ -4,29 +4,30 @@ export const projects = [
     name: 'Dashboard de Ventas',
     category: 'Business Intelligence',
     description:
-      'Analisis comercial para entender ventas, rentabilidad, productos destacados y desempeno por ciudad.',
+      'Analizar el comportamiento de las ventas de videojuegos para identificar:',
     technologies: ['Power BI', 'Power Query', 'DAX', 'Excel'],
     imageType: 'sales',
     businessProblem: [
-      'Evolucion de ventas por periodo',
-      'Productos mas rentables',
-      'Desempeno de vendedores',
-      'Rentabilidad por ciudad'
+      'Tendencias de crecimiento o disminución de ventas.',
+      'Géneros más populares.',
+      'Plataformas con mejor rendimiento.',
+      'Mercados más rentables.',
+      'Oportunidades de negocio para aumentar ingresos.'
     ],
     dataUsed: {
-      records: '12,480 registros',
-      variables: 'Fecha, producto, vendedor, ciudad, unidades, ingresos, costo, margen',
+      records: '8.82 mil millones de ventas',
+      variables: 'Nombre, Plataforma, Año, Genero, Editorial, Region y Ventas',
       source: 'Dataset comercial simulado para demostracion profesional'
     },
     cleaning: [
-      'Eliminacion de duplicados en transacciones',
-      'Tratamiento de valores nulos en ciudad y vendedor',
-      'Estandarizacion de categorias de producto'
+      'Verificar formatos de fecha.',
+      'Fusionar columnas de region en una sola columna de region.',
+      'Estandarizar nombres de plataformas y géneros.'
     ],
     transformation: [
-      'Preparacion de tablas con Power Query',
-      'Modelado estrella con tabla de ventas y dimensiones',
-      'Medidas DAX para ventas, ingresos, margen y ranking'
+      'Preparacion de tablas con Power Query.',
+      'Transformación de Datos.',
+      'Medidas DAX para ventas, ingresos, margen y ranking.'
     ],
     kpis: [
       { label: 'Ventas Totales', value: '12.4K', trend: '+18%' },
