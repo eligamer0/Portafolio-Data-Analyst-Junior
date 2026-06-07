@@ -1,0 +1,124 @@
+.layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 46px;
+  align-items: start;
+}
+
+.profileCard {
+  position: sticky;
+  top: 104px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: var(--shadow);
+}
+
+.avatar {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(69, 212, 255, 0.32);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(69, 212, 255, 0.18), rgba(64, 241, 178, 0.1)),
+    var(--surface);
+  color: var(--text);
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 950;
+}
+
+.profileCard h1 {
+  margin: 20px 0 8px;
+  font-size: 1.65rem;
+}
+
+.profileCard p,
+.infoGrid p,
+.timeline p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 34px 0;
+}
+
+.infoGrid article {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.infoGrid svg {
+  color: var(--cyan);
+}
+
+.infoGrid h3,
+.timeline h3 {
+  margin: 14px 0 8px;
+}
+
+.infoGrid p,
+.timeline p {
+  margin: 0;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  padding-left: 22px;
+}
+
+.timeline::before {
+  position: absolute;
+  inset: 8px auto 8px 0;
+  width: 2px;
+  background: linear-gradient(var(--cyan), var(--mint));
+  content: '';
+}
+
+.timeline article {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.timeline article::before {
+  position: absolute;
+  top: 24px;
+  left: -28px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  background: var(--mint);
+  content: '';
+}
+
+.timeline span {
+  color: var(--mint);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media (max-width: 880px) {
+  .layout,
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileCard {
+    position: static;
+  }
+}

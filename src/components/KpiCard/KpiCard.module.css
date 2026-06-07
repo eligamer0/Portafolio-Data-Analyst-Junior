@@ -1,0 +1,24 @@
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.card span,
+.card em {
+  display: block;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.card strong {
+  display: block;
+  margin: 10px 0;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+}
+
+.card em {
+  color: var(--mint);
+  font-weight: 800;
+}

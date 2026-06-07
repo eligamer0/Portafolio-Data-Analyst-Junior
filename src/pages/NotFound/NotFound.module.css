@@ -1,0 +1,13 @@
+.notFound {
+  text-align: center;
+}
+
+.notFound h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+}
+
+.notFound p {
+  margin: 18px auto 28px;
+  color: var(--muted);
+}

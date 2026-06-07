@@ -1,0 +1,141 @@
+:root {
+  color-scheme: dark;
+  --bg: #08111f;
+  --bg-soft: #0d1b2e;
+  --surface: #101f34;
+  --surface-strong: #142742;
+  --line: rgba(148, 163, 184, 0.18);
+  --line-strong: rgba(148, 163, 184, 0.32);
+  --text: #f7fbff;
+  --muted: #9fb0c7;
+  --muted-strong: #c9d7ea;
+  --cyan: #45d4ff;
+  --mint: #40f1b2;
+  --amber: #f6c453;
+  --rose: #ff6b91;
+  --violet: #9b8cff;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  --radius: 8px;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(69, 212, 255, 0.12), transparent 34rem),
+    linear-gradient(180deg, #08111f 0%, #0a1526 42%, #07111d 100%);
+  color: var(--text);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  min-height: 72vh;
+}
+
+::selection {
+  background: rgba(69, 212, 255, 0.28);
+}
+
+.container {
+  width: min(100% - 32px, var(--max-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.sectionAlt {
+  border-block: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--mint);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.04;
+}
+
+.sectionLead {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.reveal {
+  animation: revealUp 0.72s ease both;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

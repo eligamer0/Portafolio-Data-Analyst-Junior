@@ -1,0 +1,95 @@
+.hero {
+  padding: 92px 0 72px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  gap: 44px;
+  align-items: center;
+}
+
+.copy h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6.4rem);
+  line-height: 0.95;
+}
+
+.copy h2 {
+  margin: 16px 0 0;
+  color: var(--cyan);
+  font-size: clamp(1.35rem, 3vw, 2.4rem);
+}
+
+.copy p {
+  max-width: 640px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.75;
+}
+
+.actions,
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.actions {
+  margin-top: 28px;
+}
+
+.stats {
+  margin-top: 34px;
+}
+
+.stats article {
+  min-width: 145px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stats strong {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.stats span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.visual {
+  transform: perspective(1200px) rotateY(-5deg);
+}
+
+.projects {
+  display: grid;
+  gap: 24px;
+  margin-top: 34px;
+}
+
+@media (max-width: 940px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    transform: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding-top: 64px;
+  }
+
+  .actions > * {
+    width: 100%;
+  }
+}

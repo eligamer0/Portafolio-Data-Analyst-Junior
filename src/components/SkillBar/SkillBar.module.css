@@ -1,0 +1,53 @@
+.skill {
+  display: grid;
+  gap: 10px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted-strong);
+  font-weight: 800;
+}
+
+.top strong {
+  color: var(--text);
+}
+
+.track {
+  overflow: hidden;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  animation: fill 900ms ease both;
+}
+
+.cyan {
+  background: linear-gradient(90deg, var(--cyan), var(--mint));
+}
+
+.mint {
+  background: linear-gradient(90deg, var(--mint), #c9ff6b);
+}
+
+.amber {
+  background: linear-gradient(90deg, var(--amber), var(--rose));
+}
+
+.rose {
+  background: linear-gradient(90deg, var(--rose), var(--violet));
+}
+
+@keyframes fill {
+  from {
+    width: 0;
+  }
+}

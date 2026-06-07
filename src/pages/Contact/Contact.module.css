@@ -1,0 +1,79 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
+  gap: 46px;
+  align-items: start;
+}
+
+.links {
+  display: grid;
+  max-width: 430px;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  color: var(--muted-strong);
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 800;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.links a:hover {
+  border-color: rgba(69, 212, 255, 0.36);
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: var(--shadow);
+}
+
+.form label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted-strong);
+  font-weight: 800;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 13px 14px;
+  background: rgba(0, 0, 0, 0.16);
+  color: var(--text);
+  outline: none;
+  resize: vertical;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(69, 212, 255, 0.12);
+}
+
+@media (max-width: 840px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
