@@ -14,8 +14,8 @@ export default function DashboardMockup({ type = 'sales' }) {
       </div>
       <div className={styles.header}>
         <div>
-          <p>{isInventory ? 'Inventory Control' : 'Sales Analytics'}</p>
-          <strong>{isInventory ? 'Stock Overview' : 'Revenue Overview'}</strong>
+          <p>{isInventory ? 'Inventory Control' : 'Video Game Sales Analytics'}</p>
+          <strong>{isInventory ? 'Stock Overview' : 'Ventas Globales'}</strong>
         </div>
         <div className={styles.icon}>
           {isInventory ? <Database size={20} aria-hidden="true" /> : <TrendingUp size={20} aria-hidden="true" />}
@@ -23,16 +23,16 @@ export default function DashboardMockup({ type = 'sales' }) {
       </div>
       <div className={styles.kpiRow}>
         <div>
-          <span>{isInventory ? 'Entradas' : 'Ingresos'}</span>
-          <strong>{isInventory ? '18.2K' : '486K'}</strong>
+          <span>{isInventory ? 'Entradas' : 'Ventas Globales'}</span>
+          <strong>{isInventory ? '18.2K' : '8.82 mil millones'}</strong>
         </div>
         <div>
-          <span>{isInventory ? 'Salidas' : 'Margen'}</span>
-          <strong>{isInventory ? '15.7K' : '31%'}</strong>
+          <span>{isInventory ? 'Salidas' : 'Top Región'}</span>
+          <strong>{isInventory ? '15.7K' : 'Norteamérica'}</strong>
         </div>
         <div className={isInventory ? styles.warning : ''}>
-          <span>{isInventory ? 'Stock' : 'Ventas'}</span>
-          <strong>{isInventory ? '78' : '12.4K'}</strong>
+          <span>{isInventory ? 'Stock' : 'Top Género'}</span>
+          <strong>{isInventory ? '78' : 'Action'}</strong>
         </div>
       </div>
       <div className={styles.body}>

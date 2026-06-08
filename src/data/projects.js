@@ -4,7 +4,7 @@ export const projects = [
     name: 'Dashboard de Ventas',
     category: 'Business Intelligence',
     description:
-      'Analizar el comportamiento de las ventas de videojuegos para identificar:',
+      'Dashboard interactivo para analizar tendencias de ventas de videojuegos por año, región, género y plataforma.',
     technologies: ['Power BI', 'Power Query', 'DAX', 'Excel'],
     imageType: 'sales',
     businessProblem: [
@@ -17,32 +17,36 @@ export const projects = [
     dataUsed: {
       records: '8.82 mil millones de ventas',
       variables: 'Nombre, Plataforma, Año, Genero, Editorial, Region y Ventas',
-      source: 'Dataset comercial simulado para demostracion profesional'
+      source: 'Dataset de ventas históricas de videojuegos utilizado para análisis de mercado y tendencias de la industria.'
     },
     cleaning: [
-      'Verificar formatos de fecha.',
-      'Fusionar columnas de region en una sola columna de region.',
-      'Estandarizar nombres de plataformas y géneros.'
+      'Verificación y corrección de tipos de datos.',
+      'Unificación de columnas regionales mediante Power Query.',
+      'Estandarización de nombres de plataformas y géneros.',
+      'Validación de registros incompletos o inconsistentes.'
     ],
     transformation: [
-      'Preparacion de tablas con Power Query.',
-      'Transformación de Datos.',
-      'Medidas DAX para ventas, ingresos, margen y ranking.'
+      'Preparación de tablas en Power Query.',
+      'Creación de medidas DAX para ventas totales.',
+      'Cálculo de rankings por género, plataforma y región.',
+      'Modelado de datos para análisis temporal.'
     ],
     kpis: [
-      { label: 'Ventas Totales', value: '12.4K', trend: '+18%' },
-      { label: 'Ingresos', value: 'US$ 486K', trend: '+24%' },
-      { label: 'Productos Vendidos', value: '31.8K', trend: '+11%' }
+      { label: 'Ventas Globales', value: '8.82 mil millones' },
+      { label: 'Región Líder', value: 'Norteamérica' },
+      { label: 'Género Más Vendido', value: 'Action' }
     ],
     insights: [
-      'Las ciudades con mayor volumen no siempre generan el margen mas alto.',
-      'Tres categorias concentran mas del 60% de los ingresos mensuales.',
-      'Los vendedores top mantienen mejor tasa de conversion en productos premium.'
+      'Norteamérica concentra aproximadamente la mitad de las ventas globales.',
+      'El género Action es el de mayor volumen de ventas.',
+      'Las ventas alcanzaron su punto máximo entre 2008 y 2010.',
+      'PS2 es una de las plataformas con mejor desempeño histórico.'
     ],
     recommendations: [
-      'Priorizar campanas en ciudades con alto margen y crecimiento sostenido.',
-      'Revisar descuentos en productos de alta venta pero baja rentabilidad.',
-      'Replicar practicas de vendedores con mejor desempeno en equipos regionales.'
+      'Priorizar lanzamientos en Norteamérica por su alta participación en ventas.',
+      'Invertir en géneros con demanda histórica elevada como Action y Sports.',
+      'Analizar las causas de la caída de ventas después de 2010.',
+      'Identificar oportunidades en plataformas emergentes comparando ciclos de vida de consolas.'
     ]
   },
   {
